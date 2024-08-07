@@ -1,21 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './theme.scss';
+import './styles/theme.scss';
 import '@fontsource-variable/work-sans';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 
-import AppLayout from 'components/app-layout/app-layout.tsx';
-import Website from 'src/pages/website/website.tsx';
+import Layout from 'components/layout/layout.tsx';
+import Page from 'src/pages/website/page.tsx';
 
 export const router = createBrowserRouter([
     {
         path: '/',
-        element: <AppLayout />,
+        element: <Layout />,
         children: [
             {
                 path: '',
-                element: <Website />,
+                element: <Page />,
             },
         ],
     },

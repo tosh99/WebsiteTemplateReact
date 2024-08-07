@@ -1,13 +1,13 @@
-import styles from "./app-layout.module.scss";
+import styles from "./layout.module.scss";
 import {Outlet} from "react-router-dom";
-import {WebsiteHeader} from "components/website-header/website-header.tsx";
+import {Header} from "components/header/header.tsx";
 
-export default function AppLayout() {
+export default function Layout() {
     return (
         <>
             <div className={styles.page}>
                 <div className={styles.pageInner}>
-                    <WebsiteHeader/>
+                    <Header/>
                     <div className={styles.pageContent}>
                         <Outlet/>
                     </div>

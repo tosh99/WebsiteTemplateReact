@@ -1,13 +1,7 @@
-import styles from './website.module.scss';
+import styles from './page.module.scss';
 import { SFlex, SInput, SPageSection } from 'react-simple-ui-lib';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-
-export default function Website() {
+export default function Page() {
     return (
         <>
             <SPageSection height={'100vh'} className={styles.hero} paddingTop={'15%'}>
@@ -16,18 +10,6 @@ export default function Website() {
 
             <SPageSection height={'100vh'} className={styles.carousel}>
                 <h1>Carousel Section</h1>
-                <Swiper
-                    slidesPerView={3}
-                    spaceBetween={30}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    modules={[Pagination]}
-                    className="mySwiper">
-                    <SwiperSlide>Slide 1</SwiperSlide>
-                    <SwiperSlide>Slide 2</SwiperSlide>
-                    <SwiperSlide>Slide 3</SwiperSlide>
-                </Swiper>
             </SPageSection>
 
             <SPageSection height={'100vh'} className={styles.review}>
@@ -63,15 +45,6 @@ export default function Website() {
                         <SInput placeholder={'Email Address'} />
                     </SFlex>
                 </SFlex>
-            </SPageSection>
-
-            <SPageSection
-                className={styles.copyright}
-                style={{
-                    paddingTop: 10,
-                    paddingBottom: 10,
-                }}>
-                <h1>Copyright Section</h1>
             </SPageSection>
         </>
     );

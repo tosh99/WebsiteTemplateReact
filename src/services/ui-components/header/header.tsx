@@ -1,10 +1,10 @@
-import styles from "./website-header.module.scss";
+import styles from "./header.module.scss";
 import { SButton, SFlex } from "react-simple-ui-lib";
 import { CiShoppingCart, CiUser } from "react-icons/ci";
 import { FaCross } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
 
-export const WebsiteHeader = () => {
+export const Header = () => {
     return (
         <SFlex width={"100%"} justify={"center"} className={styles.header}>
             <SFlex width={"100%"} justify={"space-between"} align={"center"} className={styles.headerInner}>
